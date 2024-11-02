@@ -2,7 +2,8 @@ asgiref==3.8.1
 beautifulsoup4==4.12.3
 certifi==2024.8.30
 charset-normalizer==3.4.0
-Django==5.1
+Django==5.1 # This needs to be updated to version 5.1.2 to fix the A9:2017-Using Components with Known Vulnerability vulnerability
+# Django==5.1 has the vulnerability CVE-2024-45230
 idna==3.10
 requests==2.32.3
 selenium==3.141.0
