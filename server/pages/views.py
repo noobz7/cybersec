@@ -25,8 +25,9 @@ def confirmView(request):
 @login_required
 def transferView(request):
 	request.session['to'] = request.GET.get('to')
-	if (not request.GET.get('amount').isnumeric()):
-		return redirect('/')
+	# This fixes OWASP-2017 A1:2017-Injektion issue
+	#if (not request.GET.get('amount').isnumeric()):
+	#	return redirect('/')
 	request.session['amount'] = int(request.GET.get('amount'))
 	return render(request, 'pages/confirm.html')
 
