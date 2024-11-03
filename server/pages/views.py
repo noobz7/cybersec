@@ -37,13 +37,13 @@ def balanceView(request):
 		return JsonResponse({'username': 'anonymous', 'balance': 0})
 		
 
-# This fixes the A5:2017-Broken access control vulnerability
+# This fixes the OWASP-2017 A5:2017-Broken access control vulnerability
 #@login_required
 def messageSentView(request):
 	return render(request, 'pages/thanks.html')
 
 
-# This fixes the A5:2017-Broken access control vulnerability
+# This fixes the OWASP-2017 A5:2017-Broken access control vulnerability
 #@login_required
 def sendMessageView(request):
 	return render(request, 'pages/message.html')
