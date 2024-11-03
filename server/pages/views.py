@@ -8,8 +8,6 @@ from .models import Account
 @login_required
 def confirmView(request):
 
-	# Note that this transfer is very naive
-	# but will suffice for this exercise
 	amount = request.session['amount']
 	to = User.objects.get(username=request.session['to'])
 

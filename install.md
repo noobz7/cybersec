@@ -51,6 +51,7 @@ Install Django extensions alongwith the Wekzeug server:
 
 ```
 pip install django-extensions Werkzeug
+pip install pyOpenSSL
 ```
 
 Open the settings.py file in your code editor and add django_extensions to the INSTALLED_APPS list:
@@ -60,4 +61,10 @@ NSTALLED_APPS = [
     # other apps
     "django_extensions",
 ]
+```
+
+Start the server:
+
+```
+python manage.py runserver_plus --cert-file cert.pem --key-file key.pem
 ```
