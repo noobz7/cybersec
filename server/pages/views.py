@@ -40,6 +40,10 @@ def balanceView(request):
 # This fixes the OWASP-2017 A5:2017-Broken access control vulnerability
 #@login_required
 def messageSentView(request):
+	f = open("./comments.txt", "a")
+	f.write(str(request.GET["comments"]) + "\n")
+	f.close()
+	
 	return render(request, 'pages/thanks.html')
 
 
